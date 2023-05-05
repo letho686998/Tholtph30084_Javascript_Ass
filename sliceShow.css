@@ -1,0 +1,185 @@
+ *{
+    box-sizing: border-box;
+} 
+
+.container{
+   width: 1200px;
+   background: linear-gradient(rgba(45, 39, 208, 0.877),rgba(219, 209, 228, 0.4));
+   margin:0  auto;
+}
+.main-nav{
+    background: linear-gradient(rgba(167, 164, 211, 0.877),rgba(116, 108, 233, 0.877));
+    height: 40px;
+}
+.menu{
+    display: flex;
+   margin: 0px;
+}
+.menu li{
+    list-style: none;
+    padding-left: 200px;
+    padding-top: 10px;
+}
+.menu li a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.menu li a:hover{
+    
+    color: red;
+}
+.sanpham{
+    position: relative;
+    width: 300px;
+}
+.icon{
+    position: absolute;
+    top :40%;
+    left: 28%;
+    display: none;
+}
+#pro,#pro2,#pro3{
+   width: 300px;
+   border-radius: 12px;
+}
+.ten h2 {
+text-align: center;
+height: 80px;
+background: linear-gradient(rgba(167, 164, 211, 0.877),rgba(116, 108, 233, 0.877));
+color: white;
+margin: 0px;
+padding-top: 20px;
+border: 1px solid white;
+}
+.tensp{
+   text-align: center;
+   font-weight: bold;
+}
+button{
+   float: right;
+}
+
+#slide{
+    width: 100%;
+    position: relative;
+}
+#num{
+    position: absolute;
+    top : 450px;
+    left: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+#not1{
+   position: absolute;
+   top: 50%;
+   left: 40px;
+transform: translate(-50%);
+}
+#not2{
+    position: absolute;
+    top: 50%;
+   right: 0px;
+   transform: translate(-50%);
+ }
+ #not1:hover{
+    background-color: orange;
+ }
+ #not2:hover{
+    background-color: orange;
+ }
+ h2{
+    text-align: center;
+    font-weight: bolder;
+    
+ }
+
+ .content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 90px;
+ 
+    
+ }
+#pro,#pro2,#pro{
+   width: 300px;
+   height: 300px;
+}
+.gia{
+   font-weight: bold;
+}
+
+ .tensp:hover{
+    color: red;
+ }
+
+
+ .them{
+    margin-left: 40px;
+    width: 175px;
+    height: 40px;
+    background-color: rgb(245, 14, 14);
+    color: white;
+    font-size: 100%;
+    border-radius: 12px 12px;
+    border: 1px dotted white;
+ }
+ .them:hover{
+    background-color:aqua ;
+    
+ }
+
+/* .giohang{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-gap : 100px; 
+} */
+th{
+   padding: 30px;
+   border-bottom: 1px solid grey;
+}
+td{
+   border-bottom: 1px solid grey;
+}
+td button{
+   background-color: rgb(241, 28, 28);
+   border-radius: 5px 6px;
+   color: white;
+   border: 1px dotted white;
+}
+
+.thanhtoan{
+   width: 200px;
+   height: 40px;
+   border-radius: 12px 12px ;
+   background-color: rgb(245, 14, 14);
+   font-weight: bold;
+   font-size: 100%;
+   color: white;
+   margin-right: 290px;
+   border: 1px dotted white;
+}
+button:hover{
+   background-color: aqua;
+}
+h3{
+   margin: 0px;
+   float: right;
+   padding-right: 120px;
+
+}
+
+footer{
+   clear: both;
+   text-align: center;
+   height: 80px;
+   padding-top: 30px;
+   background: linear-gradient(rgba(167, 164, 211, 0.877),rgba(116, 108, 233, 0.877));
+   color: white;
+   
+}
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sliceShow.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-nav">
+        <ul class="menu">
+          <li><a href="index1.html">Trang chủ</a></li>
+          <li><a href="index1.html">Sản phẩm</a></li>
+          <li><a href="index1.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="ten">
+        <h2>LÊ THỊ THƠ - PH30084</h2>
+      </div>
+
+      <div>
+        <img src="img/images/1.jpg" id="slide" alt="" />
+        <p id="num">1 / 3</p>
+        <button id="not1" onclick="lui()">Prev</button>
+        <button id="not2" onclick="tien()">Next</button>
+      </div>
+      <br />
+      <br />
+      <h2>DANH SÁCH SẢN PHẨM</h2>
+      <br />
+      <br />
+      <div class="content">
+        <!-- <div class="product1">
+          <h3>Iphone11 64GB</h3>
+          <br />
+          <img
+            src="img/images/iphone11.webp"
+            id="pro"
+            onmouseover="hien()"
+            onmouseout="an()"
+            alt=""
+          />
+          <img class="icon" id="ico" src="img/images/icon.png" alt="" />
+          <div class="gia">
+            <p><span class="span">12500000 đ</span></p>
+            <button class="abc">Thêm vào Giỏ hàng</button>
+          </div>
+        </div> -->
+
+        <div class="sanpham">
+          <p class="tensp">Iphone11 64GB</p>
+          <img
+            src="img/images/iphone11.webp"
+            id="pro"
+            onmouseover="hien()"
+            onmouseout="an()"
+            alt=""
+          />
+          <p></p>
+          <img class="icon" id="ico" src="img/images/icon.png" alt="" />
+          <span class="gia">1200000 </span> đ
+          <button class="them">Thêm vào giỏ hàng</button>
+        </div>
+        <div class="sanpham">
+          <p class="tensp">Iphone12 64GB</p>
+          <img
+            src="img/images/iphone12.64g.webp"
+            id="pro2"
+            onmouseover="hien2()"
+            onmouseout="an2()"
+            alt=""
+          />
+          <p></p>
+          <img class="icon" id="ico2" src="img/images/icon.png" alt="" />
+          <span class="gia">1500000 </span> đ
+          <button class="them">Thêm vào giỏ hàng</button>
+        </div>
+        <div class="sanpham">
+          <p class="tensp">Iphone13 promax</p>
+          <img
+            src="img/images/iphone13promax.webp"
+            id="pro3"
+            onmouseover="hien3()"
+            onmouseout="an3()"
+            alt=""
+          />
+          <p></p>
+          <img class="icon" id="ico3" src="img/images/icon.png" alt="" />
+          <span class="gia">3000000 </span> đ
+          <button class="them">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <h2>Giỏ hàng</h2>
+        <br />
+        <table id="Giohang" align="center">
+          <tr>
+            <th colspan="2">Sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th></th>
+          </tr>
+
+          <!-- <tr>
+              <td><img src="" alt="" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><input type="number" value="1" /></td>
+              <td><button onclick="xoa(this)">xoa</button></td>
+            </tr> -->
+        </table>
+
+        <div></div>
+        <br />
+        <br />
+        <h3>Tổng tiền :<span id="tongtien"></span>đ</h3>
+        <button onclick="thanhtoan()" class="thanhtoan">Thanh toán</button>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+
+    <footer>Assignment Lập trình cơ sở với Javascript(WEB1043)</footer>
+
+    <script>
+      //=========================================script======================================
+      var arrImg = ["img/images/1.jpg", "img/images/2.jpg", "img/images/3.jpg"];
+
+      var pic = document.getElementById("slide");
+      var num = document.getElementById("num");
+      var index = 0;
+      function tien() {
+        if (index == 2) index = -1;
+        index++;
+        pic.src = arrImg[index];
+        num.innerText = index + 1 + "/3";
+      }
+      function lui() {
+        if (index == 0) index = 3;
+        index--;
+        pic.src = arrImg[index];
+        num.innerText = index + 1 + "/3";
+      }
+      setInterval("tien()", 3000);
+
+      var pro = document.getElementById("pro");
+      var ico = document.getElementById("ico");
+
+      function hien() {
+        ico.style.display = "block";
+      }
+      function an() {
+        ico.style.display = "none";
+      }
+
+      var pro2 = document.getElementById("pro2");
+      var ico2 = document.getElementById("ico2");
+
+      function hien2() {
+        ico2.style.display = "block";
+      }
+      function an2() {
+        ico2.style.display = "none";
+      }
+
+      var pro3 = document.getElementById("pro3");
+      var ico3 = document.getElementById("ico3");
+
+      function hien3() {
+        ico3.style.display = "block";
+      }
+      function an3() {
+        ico3.style.display = "none";
+      }
+
+      var tensp = document.querySelectorAll(".tensp");
+      var hinhsp = document.querySelectorAll("img");
+      var giasp = document.querySelectorAll(".gia");
+      var btn = document.querySelectorAll("button");
+      var Giohang = document.querySelector("#Giohang");
+      var tongtien = document.querySelector("#tongtien");
+
+      //
+      btn.forEach(function (item) {
+        item.addEventListener("click", function () {
+          // item.parentNode.querySelector(".tensp").innerHTML
+          //goi den tr de truy cap td
+          let ten = item.parentNode.querySelector(".tensp").innerHTML;
+          let hinh = item.parentNode.querySelector("img").src;
+          let gia = item.parentNode.querySelector(".gia").innerHTML;
+          let newTr = ` 
+            <tr class ="row">
+            <td><img src="${hinh}" alt="" width=100;> </td>
+            <td>${ten}</td>
+            <td>${gia}</td>
+            
+            <td><input onclick="inputchange(this)" type='number' value='1' > </td>
+            <td><button onclick="xoa(this)">Xóa</button> </td>
+        </tr>
+            `;
+          let tr = Giohang.querySelectorAll(".row");
+
+          for (var i = 0; i < tr.length; i++) {
+            if (tr[i].querySelectorAll("td")[1].innerHTML == ten) {
+              alert("Sản phẩm đã có trong giỏ hàng");
+              return;
+            }
+          }
+          Giohang.innerHTML += newTr;
+          tongtien.innerHTML = tinhTongTien();
+        });
+      });
+
+      // tong tien =================================
+
+      function tinhTongTien() {
+        let tr = Giohang.querySelectorAll(".row");
+        let tong = 0;
+        for (var i = 0; i < tr.length; i++) {
+          let gia = Number(tr[i].querySelectorAll("td")[2].innerHTML);
+          let sl = tr[i].querySelectorAll("td")[3].querySelector("input").value;
+          console.log(sl);
+          tong += gia * sl;
+        }
+
+        return tong;
+        inputchange();
+      }
+      //===============xoa================================================
+      function xoa(button) {
+        var buttonT = button.parentNode.parentNode;
+        buttonT.remove();
+        tongtien.innerHTML = tinhTongTien();
+      }
+      //===============change==============================================
+      function inputchange(input) {
+        let tr = Giohang.querySelectorAll(".row");
+        for (var i = 0; i < tr.length; i++) {
+          if (
+            tr[i].querySelectorAll("td")[3].querySelector("input").value < 1
+          ) {
+            alert("Sản phẩm phải >=1");
+            tr[i].querySelectorAll("td")[3].querySelector("input").value = 1;
+          }
+          var inputT = addEventListener("change", function () {
+            let sl = tr[i]
+              .querySelectorAll("td")[3]
+              .querySelector("input").value;
+          });
+        }
+        tongtien.innerHTML = tinhTongTien();
+      }
+      function thanhtoan() {
+        alert("Cảm ơn bạn đã mua hàng");
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
